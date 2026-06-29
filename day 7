@@ -1,0 +1,177 @@
+n=3
+for i in range(1,n+1):
+    for j in range(1,i+1):
+        print(i,end="")
+    print()
+or
+n=3
+for i in range(1,n+1):
+    print(str(i)*i)
+
+n=3
+count=1
+for i in range(n):
+    for j in range(i+1):
+        print(count,end="")
+        count+=1
+    print()
+
+n=4
+a=n
+for i in range(1,n+1):
+    for j in range(a-1,0,-1):
+        print(" ",end='')
+    for k in range(1,i+1):
+        print(i,end="")
+    print()
+    a-=1
+or
+n=4
+for i in range(1,n+1):
+    print(" "*(n-i)+str(i)*i)
+
+n=7
+a=1
+for i in range(1,n+1):
+    print(" "*(n-i)+'*'*a)
+    a+=2
+
+n=4
+a=n
+count=0
+for i in range(1,n+1):
+    for j in range(1,i+1):
+        count+=1
+for i in range(1,n+1):
+    for j in range(a,0,-1):
+        print(count,end="")
+        count-=1
+    print()
+    a-=1
+or
+n=5
+a=n
+count=n*(n+1)//2
+for i in range(1,n+1):
+    for j in range(a,0,-1):
+        print(count,end=" ")
+        count-=1
+    print()
+    a-=1
+
+n=6
+for i in range(n):
+    print('*',end="")
+print()
+for i in range(n-2):
+    print('*'+'_'*(n-2)+'*',end="")
+    print()
+for i in range(n):
+    print('*',end="")
+or
+n=4
+for i in range(1,n+1):
+    if i==1 or i==n:
+        print('*'*n)
+    else:
+        print('*'+'_'*(n-2)+'*')
+
+n=9
+for i in range(1,(n//2)+2):
+    print('*'*i)
+for i in range((n//2),0,-1):
+    print('*'*i)
+or
+n=9
+a=(n//2)+1
+for i in range(1,n+1):
+    if a<i:
+        a-=1
+        print('*'*a)
+    else:
+        print('*'*i)
+
+word=['cat','dog','apple']
+dic_word={i:len(i) for i in word}
+print(dic_word)
+
+n=10
+dic={i:'even' if i%2==0 else 'odd' for i in range(1,n+1)}
+print(dic)
+
+data={'a': 1, 'b': 2, 'c': 3}
+swap={j:i for i,j in data.items()}
+print(swap)
+
+
+HW 
+
+n=9
+a=n*2-3
+b=n
+for i in range(1,n*4,2):
+    if a+3<i:
+        b+=1
+        print(" "*b+"*"*a)
+        a-=2
+    else:
+        b-=1
+        print(" "*b+"*"*i)
+
+n=9
+a=n-1
+b=1
+for i in range(1,n*2,2):
+    if i==1 or i==n*2-1:
+        print(" "*a+"*"*i)
+        a-=1
+    else:
+        print(" "*a+"*"+" "*b+"*")
+        b+=2
+        a-=1
+
+n=8
+a=n-1
+s=n
+for i in range(1,n*2):
+    if a+1<i:
+        s+=1
+        print(" "*s+"*"*a)
+        a-=1
+    else:
+        s-=1
+        print(" "*s+"*"*i)
+
+n=20
+s1=n
+s2=1
+for i in range(1,n*2):
+    if i==1:
+        s1-=1
+        print(" "*s1+"*")
+    elif i<n+1:
+        s1-=1
+        print(" "*s1+"*"+" "*s2+"*")
+        s2+=2
+    elif i==n*2-1:
+        s1+=1
+        print(" "*s1+"*")
+    else:
+        s2-=2
+        s1+=1
+        print(" "*s1+"*"+" "*s2+"*")
+    if i==n:
+        s2-=2
+
+
+LeetCode:
+
+LeetCode Question No
+1137
+1281
+1342
+1518
+1952
+2427
+
+

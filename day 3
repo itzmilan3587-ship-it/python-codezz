@@ -1,0 +1,47 @@
+#Write a fn to check whether a number is even or odd
+def check(a):
+    return "Even" if a%2==0 else "Odd"
+lamcheck=lambda a:"Even" if a%2==0 else "Odd"
+b=8
+print(check(b))
+print(lamcheck(b))
+
+HomeWork:
+#1.Write a function to check whether a given number is a palindrome.
+def pal(a):
+    copy=a
+    fin=0
+    while copy>0:
+        fin=(fin*10)+(copy%10)
+        copy//=10
+    return a==fin
+print(pal(int(input())))
+
+#2.Write a function to count the number of vowels in a string.
+def vowel(a):
+    vow=['a','e','i','o','u']
+    count=0
+    for i in range(0,len(a)):
+        if a[i] in vow:
+            count+=1
+    return count
+print(vowel(input()))
+
+#3.Write a function to reverse a string.
+def rev(a):
+    return a[::-1]
+print(rev(input()))
+
+#4.Write a function to check whether number is prime or not.
+def check(a):
+    for i in range(2,(a//2)+1):
+        if a%i==0:
+            return False
+    return True
+print(check(int(input())))
+
+#5.Write a function to check whether a given number is divisible by 3 & 8.
+def div(a):
+    return a%3==0 and a%8==0
+print(div(int(input())))
+

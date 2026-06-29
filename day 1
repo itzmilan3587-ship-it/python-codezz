@@ -1,0 +1,102 @@
+Swap number without 3rd number
+a=int(input())
+b=int(input())
+a,b=b,a
+print(a)
+print(b)
+
+Positive,Negative,Zero
+a=int(input())
+if a==0:
+    print("Zero")
+elif a>0:
+    print("Positive")
+else:
+    print("Negative")
+
+Find ASCII value of character
+a=input()
+print(ord(a))
+
+From ASCII to character
+a=int(input())
+print(chr(a))
+
+Implicit
+c=10
+d=12.4
+d=c+d
+print(d)
+print(type(d))
+
+Explicit
+a=10
+b=str(a)
+print(b)
+print(type(b))
+
+Largest of three number
+a=int(input())
+b=int(input())
+c=int(input())
+if a>b and a>c:
+    print("a is largest")
+elif b>a and b>c:
+    print("b is largest")
+else:
+    print("c is largest")
+or
+a=int(input())
+b=int(input())
+c=int(input())
+if a>b:
+    if a>c:
+        print("a is largest")
+    else:
+        print("c is largest")
+else:
+    if b>c:
+        print("b is largest")
+    else:
+        print("c is largest")
+
+To find Lowercase,Uppercase,Digit,Special Character
+a=input()
+if(ord(a)>=97 and ord(a)<=122):
+    print("Lowercase")
+elif(ord(a)>=65 and ord(a)<=90):
+    print("Uppercase")
+elif(ord(a)>=48 and ord(a)<=57):
+    print("Digit")
+else:
+    print("Special Character")
+
+
+HomeWork
+Largest of three
+a=int(input())
+b=int(input())
+c=int(input())
+if a>b and a>c:
+    print("a is largest")
+elif b>a and b>c:
+    print("b is largest")
+elif c>a and c>b:
+    print("c is largest")
+else:
+    print("Numbers are equal")
+
+Leap Year
+a=int(input())
+if(a%4==0 and a%100!=0) or a%400==0:
+    print("Leap year")
+else:
+    print("Not a leap year")
+
+Left triangle Star pattern
+a=int(input())
+for i in range(0,a):
+    for j in range(0,i+1):
+        print("*",end=" ")
+    print("")
+

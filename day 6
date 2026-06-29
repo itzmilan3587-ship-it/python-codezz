@@ -1,0 +1,104 @@
+#Write a python program in order to read data from one csv file and paste the data in 3 csv files
+import csv
+f=open("Test.csv","r")
+data=csv.reader(f)
+f1=open("Test_1.csv","w")
+f2=open("Test_2.csv","w")
+f3=open("Test_3.csv","w")
+w1=csv.writer(f1)
+w2=csv.writer(f2)
+w3=csv.writer(f3)
+w1.writerows(data)
+f.seek(0)
+w2.writerows(data)
+f.seek(0)
+w3.writerows(data)
+
+#1. Write a program to count the number of words in a text file.
+f=open("Text_Ex.txt","r")
+ch=f.read()
+word=ch.split()
+print(len(word))
+f.close()
+
+#2. Create a class Vehicle with method start(). Override it in class Car.
+class Vehicle:
+    def start(self):
+        print("Car is starting")
+class Car(Vehicle):
+    def start(self):
+        print("Car started")
+c=Car()
+c.start()
+
+#3. Write a program with multiple except blocks (ValueError and ZeroDivisionError).
+try:
+    a=int(input())
+    div=10/a
+    print(div)
+except ValueError as i:
+    print(i)
+except ZeroDivisionError as z:
+    print(z)
+
+#4. Write a program that raises a custom exception if marks are not between 0 and 100
+class MarkException(Exception):
+    pass
+try:
+    m=int(input())
+    if m<0 or m>100:
+        raise MarkException("Plz enter the correct mark")
+    print("You are mark:",m)
+except MarkException as m:
+    print(m)
+
+#5. Write a program that raises a custom exception if a user enters a negative number
+class NegException(Exception):
+    pass
+try:
+    num=int(input("Enter: "))
+    if num<0:
+        raise NegException("Enter number 0 or above 0")
+    print("Your number:",num)
+except NegException as n:
+    print(n)
+
+#6. Create a class Shape with method area(). Override it in classes Rectangle and Circle
+class Shape:
+    def area(self):
+        print("Area of shape")
+class Rectangle(Shape):
+    def area(self):
+        l=int(input("Length: "))
+        b=int(input("Breadth: "))
+        print("Area of rectangle: ",l*b)
+class Circle(Shape):
+    def area(self):
+        r=int(input("Radius: "))
+        print("Area of rectangle: ",r*r)
+rec=Rectangle()
+rec.area()
+cir=Circle()
+cir.area()
+
+#7. Write a program to count the number of vowels in a text file
+f=open("Text_Ex.txt","r")
+w=f.read().lower()
+vowels=['a','e','i','o','u']
+count=0
+for ch in w:
+    if ch in vowels:
+        count+=1
+print(count)
+f.close()
+
+#8. Write a program to write student details into a text file from csv file
+import csv
+f=open("Test.csv","r")
+f1=open("CSV_to_Text","w")
+data=csv.reader(f)
+for i in data:
+    f1.write(",".join(i)+"\n")
+f.close()
+f1.close()
+
